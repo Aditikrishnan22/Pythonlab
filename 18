@@ -1,0 +1,50 @@
+class student:
+    def getdata(self,rno,name,course):
+        self.rno=rno
+        self.name=name
+        self.course=course
+    def displaystudent(self):
+        print(" ")
+        print("Student Details")
+        print(" ")
+        print("Roll no:",self.rno)
+        print("Name:",self.name)
+        print("Course:",self.course)
+class test(student):
+    def getmarks(self,marks):
+        self.marks=marks
+    def displaymarks(self):
+       print("Marks=",self.marks)
+class sports:
+    def getsportsmark(self,spmarks):
+        self.spmarks=spmarks
+    def displaysportsmark(self):
+        print("Sportsmark:",self.spmarks)
+class result(test,sports):
+    def calculategrade(self):
+        m=self.marks+self.spmarks
+        if m>=480:
+            self.grade="S"
+            print("Result=",self.grade)
+        elif m>360:
+            self.grade="A"
+            print("Result=",self.grade)
+        elif m>240:
+            self.grade="B"
+            print("Result=",self.grade)
+        else:
+            self.grade="Failed"
+            print("Result=",self.grade)
+r=int(input("Enter Roll_no:"))
+n=input("Enter name:")
+c=input("Enter course:")
+m=int(input("Enter Marks:"))
+s=int(input("Enter sportsmarks:"))
+stud=result()
+stud.getdata(r,n,c)
+stud.displaystudent()
+stud.getmarks(m)
+stud.displaymarks()
+stud.getsportsmark(s)
+stud.displaysportsmark()
+stud.calculategrade(
