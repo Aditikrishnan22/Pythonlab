@@ -1,0 +1,62 @@
+def add(a,b):
+    print(" ")
+    print("Sum=",a+b)
+def sub(a,b):
+    print(" ")
+    print("Subtraction=",a-b)
+def mul(a,b):
+    print(" ")
+    print("Multiplication=",a*b)
+def div(a,b):
+    print(" ")
+    print("Division=",a/b)
+def mod(a,b):
+    print(" ")
+    print("Modulus=",a%b)
+print("Enter two numbers:")
+a=int(input())
+b=int(input())
+
+while True:
+    print(" ")
+    print(" ")
+    print(" CHOOSE AN OPERATION  ")
+    print(" ")
+    print("1.Addition")
+    print("2.Division")
+    print("3.Subtraction")
+    print("4.Multiplication")
+    print("5.Modulus")
+    print(" ")
+    k=int(input())
+    if(k==1):
+        
+      #ADDITION
+     add(a,b)
+    
+    elif(k==2):
+        
+        #DIVISION
+        div(a,b)
+        
+        
+    elif(k==3):
+
+        #SUBTRACTION
+        sub(a,b)
+
+    elif(k==4):
+
+        #MULTIPLICATION
+        mul(a,b)
+        
+    elif(k==5):
+
+        #MODULUS
+         mod(a,b)
+        
+    elif(k==6):
+        print("Invalid option!!!!")
+        print("Thank you")
+        break
+         
