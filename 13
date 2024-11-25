@@ -1,0 +1,37 @@
+# SET-1
+set1 = set()
+n = int(input("Enter the number of elements to add to the set1: "))
+print("Enter the elements:")
+for i in range(0, n):
+    b = input()
+    set1.add(b) 
+# Display the final set
+print("SET1:",set1)
+
+#SET-2
+set2 = set()
+n = int(input("Enter the number of elements to add to the set2: "))
+print("Enter the elements:")
+for i in range(0, n):
+    b = input()
+    set2.add(b) 
+# Display the final set
+print("SET2:",set2)
+
+#SET OPERATIONS
+
+#UNION
+print("Union of both Sets:")
+print(set1.union(set2))
+
+#INTERSECTION
+print("Intersection of sets:")
+print(set1.intersection(set2))
+
+#DIFFERENCE
+print("Difference of both set:")
+print(set1.difference(set2))
+
+#SYMMETRIC DIFFERENCE
+print("Symmetric difference of both sets:")
+print(set1^set2)
