@@ -1,0 +1,6 @@
+import tkinter as tk
+window=tk.Tk()
+window.title("change background")
+window.geometry("400x300")
+window.configure(bg="green")
+window.mainloop()
