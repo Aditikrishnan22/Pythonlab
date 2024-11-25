@@ -1,0 +1,10 @@
+n=int(input("Enter the limit of list:"))
+a=[]
+for i in range(0,n):
+    b=input("Enter element to input into list:")
+    a.insert(i,b)
+print("LIST")
+print(a)
+#COUNT
+c1=input("Element to count:")
+print("Count:",a.count(c1))
