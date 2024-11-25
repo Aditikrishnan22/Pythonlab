@@ -1,0 +1,10 @@
+class error(Exception):
+    pass
+a=int(input("Enter a number:"))
+try:
+    if a%2!=0:
+      raise error
+except error:
+    print("Entered value is odd number")
+else:
+    print("value is a positive number",a)
