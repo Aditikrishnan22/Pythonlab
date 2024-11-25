@@ -1,0 +1,27 @@
+n=int(input("How many items do you want to add to the dictionary? "))
+thisdict={}
+# Loop to get key-value pairs from the user
+for i in range(n):
+    key = input(f"Enter key for item {i+1}: ")
+    value = input(f"Enter value for item {i+1}: ")
+    thisdict[key] = value  
+print("\nFull dictionary items")
+print(" ")
+
+for key,value in thisdict.items():
+    print(f"{key}:{value}")
+    print(" ")
+
+print("Keys:")
+for key in thisdict.keys():
+    print(key)
+    print(" ")
+    
+print("Values:")
+for value in thisdict.values():
+    print(value)
+    print(" ")
+
+print("Key-Value pairs with index:")
+for index, (key, value) in enumerate(thisdict.items()):
+    print(f"Index: {index}, Key: {key}, Value: {value}")
