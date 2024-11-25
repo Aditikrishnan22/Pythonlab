@@ -1,0 +1,19 @@
+class bank:
+    def getdata(self,acno,name,bal):
+        self.acno=acno
+        self.name=name
+        self.bal=bal
+class disclass(bank):
+    def displayaccount(self):
+        print(" ")
+        print("ACCOUNT DETAILS")
+        print(" ")
+        print("Account number:",self.acno)
+        print("Customer Name:",self.name)
+        print("Available bank:",self.bal)
+a=int(input("Enter Account_number:"))
+n=input("Enter Customer_name:")
+c=input("Enter Balance:")
+stud=disclass()
+stud.getdata(a,n,c)
+stud.displayaccount()
