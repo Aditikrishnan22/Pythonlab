@@ -1,0 +1,13 @@
+t=[]
+n=int(input("Enter the limit of tuple:"))
+print("enter the value:")
+for i in range(n):
+    b=input()
+    t.append(b)
+tup=tuple(t)
+c=input("Enter the value to be counted:")
+cot=tup.count(c)
+print(cot)
+ind=input("enter the value that need to get the index")
+inde=tup.index(ind)
+print(inde)
