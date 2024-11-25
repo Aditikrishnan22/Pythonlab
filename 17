@@ -1,0 +1,41 @@
+class student:
+    def getdata(self,rno,name,course):
+        self.rno=rno
+        self.name=name
+        self.course=course
+    def displaystudent(self):
+        print(" ")
+        print("Student Details")
+        print(" ")
+        print("Roll no:",self.rno)
+        print("Name:",self.name)
+        print("Course:",self.course)
+class test(student):
+    def getmarks(self,marks):
+        self.marks=marks
+    def displaymarks(self):
+       print("Marks=",self.marks)
+class result(test):
+    def calculategrade(self):
+        if self.marks>=480:
+            self.grade="S"
+            print("Result=",self.grade)
+        elif self.marks>360:
+            self.grade="A"
+            print("Result=",self.grade)
+        elif self.marks>240:
+            self.grade="B"
+            print("Result=",self.grade)
+        else:
+            self.grade="Failed"
+            print("Result=",self.grade)
+r=int(input("Enter Roll_no:"))
+n=input("Enter name:")
+c=input("Enter course:")
+m=int(input("Enter Marks:"))
+stud=result()
+stud.getdata(r,n,c)
+stud.displaystudent()
+stud.getmarks(m)
+stud.displaymarks()
+stud.calculategrade()
