@@ -1,0 +1,9 @@
+import numpy as np
+a=int(input("enter the number of elements in the array"))
+l1=[]
+for i in range(a):
+    n=int(input("enter the element"))
+    l1.append(n)
+array=np.array(l1)
+s=np.sort(array)
+print(s)
