@@ -1,0 +1,23 @@
+class student:
+    def getdata(self,rno,name,course):
+        self.rno=rno
+        self.name=name
+        self.course=course
+    def displaystudent(self):
+        print("Roll no:",self.rno)
+        print("Name:",self.name)
+        print("Course:",self.course)
+class test(student):
+    def getmarks(self,marks):
+        self.marks=marks
+    def displaymarks(self):
+       print("marks=",self.marks)
+r=int(input("Enter Roll_no:"))
+n=input("Enter name:")
+c=input("Enter course:")
+m=int(input("Enter Marks:"))
+stud=test()
+stud.getdata(r,n,c)
+stud.displaystudent()
+stud.getmarks(m)
+stud.displaymarks()
