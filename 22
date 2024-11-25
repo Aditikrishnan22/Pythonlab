@@ -1,0 +1,24 @@
+import matplotlib.pyplot as plt
+n=int(input("enter the number of elements"))
+x=[]
+y=[]
+print("enter the x values")
+for i in range(n):
+    x_value=float(input("enter the x values"))
+    x.append(x_value)
+print("enter the y values")
+for i in range(n):
+    y_value=float(input("enter the y values"))
+    y.append(y_value)
+    
+plt.plot(x,y)
+plt.title("line graph")
+plt.xlabel("x axis")
+plt.ylabel("y axis")
+plt.show()
+
+plt.bar(x,y)
+plt.title("bar graph")
+plt.xlabel("x axis")
+plt.ylabel("y axis")
+plt.show()
