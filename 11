@@ -1,0 +1,117 @@
+n=int(input("Enter the limit of list:"))
+a=[]
+
+for i in range(0,n):
+    b=input("Enter element to input:")
+    a.insert(i,b)
+print("LIST")
+print(a)
+
+while True:
+    
+    print(" ")
+    print("Choose a list method:")
+    print(" ")
+    
+    print("1.Insert()")
+    print("2.Append()")
+    print("3.Remove()")
+    print("4.Count()")
+    print("5.Sort()")
+    print("6.Reverse()")
+    print("7.Pop()")
+    print("8.Clear()")
+    print("9.Copy()")
+    print("10.Extend()")
+    k=int(input())
+    if(k==1):
+        
+      #INSERT METHOD
+      b=input("Enter element to input:")
+      p=int(input("Enter position to insert:"))
+      a.insert(p,b)
+      print(a)
+    
+    elif(k==2):
+        
+        #APPEND METHOD
+        d=int(input("Element to append:"))
+        print("List after appending:")
+        a.append(d)
+        print(a)
+        
+    elif(k==3):
+
+        #REMOVE METHOD
+        d=input("Element to remove:")
+        print("List after deletion:")
+        a.remove(d)
+        print(a)
+        
+
+    elif(k==4):
+
+        #COUNT
+        c1=int(input("Element to count:"))
+        print("Count:",a.count(c1))
+
+    elif(k==5):
+
+        #SORTING
+        a.sort()
+        print("After sorting:")
+        print(a)
+        
+    elif(k==6):
+
+        #REVERSING
+        a.sort(reverse="True")
+        print("After reversing:")
+        print(a)
+
+    elif(k==7):
+
+        #POP METHOD
+        n1=int(input("Enter position to pop:"))
+        a.pop(n1)
+        print("List after popping:")
+        print(a)
+        
+    elif(k==8):
+
+        #CLEAR METHOD
+        a.clear()
+        print(" LIST ")
+        print(a)
+
+    elif(k==9):
+
+        #COPY METHOD
+        c1=a.copy()
+        print("List A = ", a)
+        print("List C1 = ", c1)
+
+    elif(k==10):
+
+        #EXTEND METHOD
+        n3=int(input("Enter the limit of list 2:"))
+        a3=[]
+
+        for i in range(0,n3):
+             b1=input("Enter element to input:")
+             a3.insert(i,b1)
+        print("LIST-2")
+        print(a3)
+        print("After extending:")
+        print(a.extend(a3))
+
+    elif(k==11):
+
+        #INDEX METHOD
+        r=int(input("Element to search:"))
+        print("Element found at index ",a.index(r))
+
+    elif(k==12):
+                   print("Invalid option!!!!")
+                   break
+         
