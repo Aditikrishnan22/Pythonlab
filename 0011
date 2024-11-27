@@ -1,0 +1,125 @@
+n = int(input("Enter the limit of list:"))
+a = []
+
+# Collect list elements
+for i in range(n):
+    b = input(f"Enter element {i+1} to input: ")
+    a.append(b)  # Using append() instead of insert
+
+print("Initial List:")
+print(a)
+
+while True:
+    print("\nChoose a list method:")
+    print("1. Insert()")
+    print("2. Append()")
+    print("3. Remove()")
+    print("4. Count()")
+    print("5. Sort()")
+    print("6. Reverse()")
+    print("7. Pop()")
+    print("8. Clear()")
+    print("9. Copy()")
+    print("10. Extend()")
+    print("11. Index()")
+    print("12. Exit")
+    
+    try:
+        k = int(input("Choose an option (1-12): "))
+        
+        if k == 1:
+            # INSERT METHOD
+            b = input("Enter element to insert: ")
+            p = int(input("Enter position to insert (0-based): "))
+            a.insert(p, b)
+            print("List after insertion:")
+            print(a)
+
+        elif k == 2:
+            # APPEND METHOD
+            d = input("Element to append: ")
+            a.append(d)
+            print("List after appending:")
+            print(a)
+
+        elif k == 3:
+            # REMOVE METHOD
+            d = input("Element to remove: ")
+            if d in a:
+                a.remove(d)
+                print("List after deletion:")
+                print(a)
+            else:
+                print(f"Element {d} not found in list.")
+
+        elif k == 4:
+            # COUNT METHOD
+            c1 = input("Element to count: ")
+            print("Count:", a.count(c1))
+
+        elif k == 5:
+            # SORT METHOD
+            a.sort()
+            print("List after sorting:")
+            print(a)
+
+        elif k == 6:
+            # REVERSE METHOD
+            a.reverse()
+            print("List after reversing:")
+            print(a)
+
+        elif k == 7:
+            # POP METHOD
+            try:
+                n1 = int(input("Enter position to pop (0-based index): "))
+                a.pop(n1)
+                print("List after popping:")
+                print(a)
+            except IndexError:
+                print("Invalid index. Please enter a valid index within range.")
+
+        elif k == 8:
+            # CLEAR METHOD
+            a.clear()
+            print("List cleared:")
+            print(a)
+
+        elif k == 9:
+            # COPY METHOD
+            c1 = a.copy()
+            print("Original List:")
+            print(a)
+            print("Copied List:")
+            print(c1)
+
+        elif k == 10:
+            # EXTEND METHOD
+            n3 = int(input("Enter the limit of list 2: "))
+            a3 = []
+            for i in range(n3):
+                b1 = input(f"Enter element {i+1} of list 2: ")
+                a3.append(b1)
+            print("List 2:")
+            print(a3)
+            a.extend(a3)
+            print("List after extending with list 2:")
+            print(a)
+
+        elif k == 11:
+            # INDEX METHOD
+            r = input("Enter element to search for: ")
+            if r in a:
+                print("Element found at index:", a.index(r))
+            else:
+                print(f"Element {r} not found in list.")
+
+        elif k == 12:
+            print("Exiting program...")
+            break
+
+        else:
+            print("Invalid option! Please choose a number between 1 and 12.")
+
+    except ValueError:
+        print("Invalid input! Please enter a number between 1 and 12.")
